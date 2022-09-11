@@ -1,0 +1,223 @@
+import java.util.Scanner;
+
+
+//ДЗ 1. Составить программу вывода любого числа любое заданное число раз
+
+
+/*public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        int number = sc.nextInt();
+        int amount = sc.nextInt();
+        for (int i = 0; i < amount; i++){
+            System.out.println(number);
+        }
+    }
+}*/
+/* ДЗ 2. Напечатать числа следующим образом:
+ 25 25.5 24.8
+ 26 26.5 25.8
+ ...
+35 35.5 34.8*/
+/*
+public class Main {
+    public static void main(String[] args){
+        for(int i = 25; i <= 35; i++){
+            System.out.printf("%d %d.5 %d.8\n", i, i, i-1);
+        }
+    }
+}
+*/
+
+//ДЗ 3. Напечатать таблицу соответствия между весом в фунтах и весом в килограммах для значений 1, 2, ..., 10 фунтов (1 фунт = 453 г).
+/*
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf("%d фунт = %,.4f кг\n", i, i * 0.453592);
+        }
+    }
+}
+*/
+
+//ДЗ 4. Вычислить сумму 1+1/2+1/3+...+1/n
+/*
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        double x = 0;
+        for (int i = 1; i <= n; i++) {
+            x += (double) 1/i;
+            System.out.println(x);
+        }
+        System.out.print(x);
+    }
+}
+*/
+
+/* Task 12 . Гражданин  1 марта открыл счет в банке, вложив  1000 руб. Через каждый месяц размер вклада увеличивается на 2% от имеющейся суммы.
+ Определить:
+1.за какой месяц величина ежемесячного увеличения вклада превысит 30 руб.;
+2.через сколько месяцев размер вклада превысит 1200 руб.*/
+
+
+//Решение While
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int balance = 1200;
+        double profit = 0;
+        int count_month = 0;
+        while ( profit <= 30){
+            profit = balance * 0.02;
+            balance += balance * 0.02;
+            count_month ++;
+        }
+        System.out.print(count_month);
+    }
+}*/
+
+/*public class Main {
+    public static void main(String[] args) {
+        double balance = 1200;
+        double profit = 0.0;
+
+        int count_month;
+        for(count_month = 0; profit <= 30.0; ++count_month) {
+            profit = balance * 0.02;
+            balance = balance + balance * 0.02;
+        }
+
+        System.out.print(count_month);
+    }
+}*/
+
+//Решение While
+/*public class Main {
+    public static void main(String[] args) {
+        double balance = 1000;
+        int count_month = 0;
+        while ( balance <= 1200){
+            balance += balance * 0.02;
+            count_month ++;
+        }
+        System.out.print(count_month);
+    }
+}*/
+
+/*public class Main {
+    public static void main(String[] args) {
+        double balance = 1000.0;
+        int count_month;
+
+        for(count_month = 0; balance <= 1200.0; ++count_month) {
+            balance += balance * 0.02;
+        }
+
+        System.out.print(count_month);
+    }
+}*/
+
+//Task 8.2
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+
+        int count = 0;
+        int last_number = number % 10;
+        while (number !=0) {
+            int ending = number % 10;
+
+            if (ending == last_number) {
+                count++;
+            }
+
+            number = number / 10;
+        }
+        System.out.println(count);
+    }
+}*/
+
+//Task 8.3
+/*
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number = sc.nextInt();
+        int count = 0;
+        while (number !=0) {
+            int ending = number % 10;
+
+            if (ending % 2 == 0) {
+                count++;
+            }
+
+            number = number / 10;
+        }
+        System.out.println(count);
+    }
+}*/
+
+//Task 8.4
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number = sc.nextInt();
+        int sum = 0;
+        while (number !=0) {
+            int ending = number % 10;
+
+            if (ending > 5) {
+                sum+= ending;
+            }
+
+            number = number / 10;
+        }
+        System.out.println(sum);
+    }
+}*/
+
+//Task 8.5
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number = sc.nextInt();
+        int composition = 1;
+        while (number !=0) {
+            int ending = number % 10;
+
+            if (ending > 7) {
+                composition = composition * ending;
+            }
+
+            number = number / 10;
+        }
+        System.out.println(composition);
+    }
+}*/
+
+//Task 8.7
+/*
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number = sc.nextInt();
+        int count = 0;
+        while (number !=0) {
+            int ending = number % 10;
+
+            if (ending == 0 | ending == 5) {
+                count++;
+            }
+
+            number = number / 10;
+        }
+        System.out.println(count);
+    }
+}*/
